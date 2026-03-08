@@ -2,7 +2,8 @@ package de.Roboter007.radioactiveskulls.mixin;
 
 import de.Roboter007.radioactiveskulls.RadioactiveConfig;
 import net.minecraft.client.renderer.PlayerSkinRenderCache;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.world.entity.player.PlayerSkin;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,7 +23,7 @@ public class MixinRenderInfo {
     @Inject(method = "renderType", at = @At("HEAD"), cancellable = true)
     public void renderType(CallbackInfoReturnable<RenderType> cir) {
         if(RadioactiveConfig.shouldRenderTypeBeChanged("skulls")) {
-            cir.setReturnValue(RenderType.textSeeThrough(playerSkin.body().texturePath()));
+            cir.setReturnValue(RenderTypes.textSeeThrough(playerSkin.body().texturePath()));
             cir.cancel();
         }
     }
