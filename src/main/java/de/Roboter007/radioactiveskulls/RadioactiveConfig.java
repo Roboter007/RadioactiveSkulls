@@ -24,7 +24,7 @@ public class RadioactiveConfig {
             RadioactiveCategory radioactiveCategory = radioactiveConfigOption.radioactiveCategory();
 
             ModConfigSpec.BooleanValue renderedOption = BUILDER
-                    .comment(radioactiveCategory.name() + ": " + "Changes the RenderType of " + changedRenderType + " to textSeeThrough()")
+                    .comment(radioactiveCategory.name() + ": Changes the RenderType of " + changedRenderType + " to the RenderType of Text (textSeeThrough())")
                     .define("render_" + changedRenderType, radioactiveCategory.isEnabled());
 
             CONFIG_VALUES.put(changedRenderType, renderedOption);

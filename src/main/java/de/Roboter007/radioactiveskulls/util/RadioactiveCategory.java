@@ -1,7 +1,7 @@
 package de.Roboter007.radioactiveskulls.util;
 
 public enum RadioactiveCategory {
-    SKULLS(true),
+    NONEXPERIMENTAL(true),
     EXPERIMENTAL(false);
 
     private final boolean enabled;
@@ -9,6 +9,7 @@ public enum RadioactiveCategory {
     RadioactiveCategory(boolean enabled) {
         this.enabled = enabled;
     }
+
 
     public boolean isEnabled() {
         return enabled;

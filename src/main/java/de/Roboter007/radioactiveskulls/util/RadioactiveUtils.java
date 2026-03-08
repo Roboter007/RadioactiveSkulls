@@ -7,7 +7,7 @@ public class RadioactiveUtils {
     public List<RadioactiveConfigOption> changedRenderTypes= new ArrayList<>();
 
     public RadioactiveUtils() {
-        changedRenderTypes.add(new RadioactiveConfigOption("skulls", RadioactiveCategory.SKULLS));
+        changedRenderTypes.add(new RadioactiveConfigOption("skulls", RadioactiveCategory.NONEXPERIMENTAL));
         changedRenderTypes.add(new RadioactiveConfigOption("armorCutoutNoCull", RadioactiveCategory.EXPERIMENTAL));
         changedRenderTypes.add(new RadioactiveConfigOption("outline", RadioactiveCategory.EXPERIMENTAL));
         changedRenderTypes.add(new RadioactiveConfigOption("crumbling", RadioactiveCategory.EXPERIMENTAL));
